@@ -3,124 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manoj Deo | Software Engineer</title>
+  <title>Manoj Deo | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-inter">
+<body class="bg-gray-900 text-gray-100 font-inter relative">
+
+  <!-- Background Animation -->
+  <div id="particles-js"></div>
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12 text-center">
-    <h1 class="text-4xl font-bold">Manoj Deo</h1>
-    <p class="text-lg mt-2">Software Engineer | Web Developer | ML Enthusiast</p>
-    <nav class="mt-4 space-x-6">
-      <a href="#about" class="hover:text-teal-400">About</a>
-      <a href="#experience" class="hover:text-teal-400">Experience</a>
-      <a href="#projects" class="hover:text-teal-400">Projects</a>
-      <a href="#skills" class="hover:text-teal-400">Skills</a>
-      <a href="#contact" class="hover:text-teal-400">Contact</a>
-    </nav>
+  <header class="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md shadow z-50">
+    <div class="text-center py-4">
+      <h1 class="text-3xl font-bold">Manoj Deo</h1>
+      <p class="mt-1">💻 Software Engineer | 🌐 Web Developer | 🤖 ML Enthusiast</p>
+      <nav class="mt-2 space-x-6">
+        <a href="#about" class="hover:text-teal-400">About</a>
+        <a href="#experience" class="hover:text-teal-400">Experience</a>
+        <a href="#projects" class="hover:text-teal-400">Projects</a>
+        <a href="#education" class="hover:text-teal-400">Education</a>
+        <a href="#skills" class="hover:text-teal-400">Skills</a>
+        <a href="#contact" class="hover:text-teal-400">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto py-16 px-6 text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I'm a Master’s student in Computer Science at the University of Florida, previously a Software Engineer at Oracle. 
-      I specialize in building efficient systems, integrating web and ML technologies, and delivering solutions with real-world impact.
-    </p>
+  <section id="about" class="pt-32 pb-16 max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10" data-aos="fade-up">
+    <img src="logos/ManojImage.jpg" alt="Manoj Deo" class="w-40 h-40 rounded-full border-4 border-teal-400 shadow-lg object-cover">
+    <div>
+      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+      <p class="leading-relaxed">
+        I'm a Master’s student in Computer Science at the University of Florida and former Software Engineer at Oracle.  
+        My passion lies in building scalable systems, integrating AI + ML into real-world applications, and contributing to impactful projects.  
+      </p>
+    </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="bg-white py-16 px-6" data-aos="fade-up">
+  <section id="experience" class="py-16 px-6" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-10">Professional Experience</h2>
-    <div class="grid gap-8 max-w-4xl mx-auto">
-      
-      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold">Graduate Research Assistant | UF Health</h3>
-        <p class="text-gray-600 italic">June 2025 – Present</p>
-        <ul class="list-disc ml-6 mt-3">
-          <li>Developed scRNA-seq pipeline using Seurat in R, accelerating analysis by 35%.</li>
-          <li>Automated preprocessing and normalization for consistent gene expression output.</li>
-        </ul>
+    <div class="grid gap-8 max-w-5xl mx-auto">
+
+      <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-xl shadow">
+        <img src="logos/UFHealth.png" alt="UF Health" class="w-12 h-12 object-contain">
+        <div>
+          <h3 class="text-xl font-bold">Graduate Research Assistant | UF Health</h3>
+          <p class="italic text-gray-400">June 2025 – Present</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Developed scRNA-seq pipeline in R (Seurat), boosting analysis efficiency by 35%.</li>
+            <li>Automated preprocessing & normalization for gene expression data.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold">Software Engineer | Oracle</h3>
-        <p class="text-gray-600 italic">July 2022 – July 2024</p>
-        <ul class="list-disc ml-6 mt-3">
-          <li>Led a critical core banking enhancement for HDFC, enabling scalability to 10,000+ branches.</li>
-          <li>Improved application performance by 25% through DLL optimization and Agile delivery.</li>
-        </ul>
+      <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-xl shadow">
+        <img src="logos/Oracle.png" alt="Oracle" class="w-12 h-12 object-contain">
+        <div>
+          <h3 class="text-xl font-bold">Software Engineer | Oracle</h3>
+          <p class="italic text-gray-400">July 2022 – July 2024</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Led banking enhancement project for HDFC, scaling to 10,000+ branches.</li>
+            <li>Improved performance by 25% via DLL optimization in Agile delivery.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold">Web Dev Intern | Trudawn Solutions</h3>
-        <p class="text-gray-600 italic">June 2020 – Sept 2020</p>
-        <ul class="list-disc ml-6 mt-3">
-          <li>Created responsive web interfaces using Django, HTML, and JavaScript.</li>
-          <li>Optimized client websites improving engagement and usability.</li>
-        </ul>
+      <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-xl shadow">
+        <img src="logos/Trudawn.png" alt="Trudawn" class="w-12 h-12 object-contain">
+        <div>
+          <h3 class="text-xl font-bold">Web Dev Intern | Trudawn Solutions</h3>
+          <p class="italic text-gray-400">June 2020 – Sept 2020</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Built responsive interfaces using Django, HTML, JS.</li>
+            <li>Optimized client websites for better performance & usability.</li>
+          </ul>
+        </div>
       </div>
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-16 px-6 bg-gray-900/80" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-10">Education</h2>
+    <div class="grid gap-8 max-w-5xl mx-auto">
+
+      <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-xl shadow">
+        <img src="logos/UniversityOfFlorida.png" alt="UF" class="w-12 h-12 object-contain">
+        <div>
+          <h3 class="text-xl font-bold">University of Florida</h3>
+          <p class="italic text-gray-400">MS in Computer Science | 2024 – 2026</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-xl shadow">
+        <img src="logos/UniversityOfMumbai.jpeg" alt="Mumbai University" class="w-12 h-12 object-contain">
+        <div>
+          <h3 class="text-xl font-bold">University of Mumbai</h3>
+          <p class="italic text-gray-400">B.E. in Computer Engineering | 2018 – 2022</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="max-w-5xl mx-auto py-16 px-6" data-aos="fade-up">
+  <section id="projects" class="py-16 px-6" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
         <h3 class="text-xl font-bold">Reddit Clone with Proto.Actor</h3>
-        <p class="mt-2">Built a concurrent Reddit-like engine in Go with real-time messaging.</p>
-        <a class="inline-block mt-3 bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600" href="https://github.com/manoj-deo/reddit-clone" target="_blank">View on GitHub</a>
+        <p class="mt-2">Built a concurrent Reddit-like engine in Go using Proto.Actor with real-time messaging.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
         <h3 class="text-xl font-bold">Covid Contactless Delivery</h3>
-        <p class="mt-2">AI + IoT based smart delivery system with facial recognition, RFID, and GPS.</p>
+        <p class="mt-2">Smart AI + IoT delivery system using C++, RFID, GPS & facial recognition.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold">SeedKart - Farmer Seed Ordering</h3>
-        <p class="mt-2">Django-powered e-commerce platform with search, filter, and admin panel.</p>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold">SeedKart – Farmer Seed Ordering</h3>
+        <p class="mt-2">Django-based e-commerce platform for farmers with search, filter & admin panel.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-bold">PATRE - Traffic Enforcement</h3>
-        <p class="mt-2">License plate OCR and violation detection using OpenCV + ML.</p>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold">PATRE – Traffic Enforcement</h3>
+        <p class="mt-2">License plate OCR + traffic violation detection using OpenCV & ML.</p>
       </div>
 
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="bg-gray-100 py-16 px-6" data-aos="fade-up">
+  <section id="skills" class="py-16 px-6 bg-gray-900/80" data-aos="fade-up">
     <h2 class="text-3xl font-semibold text-center mb-10">Skills</h2>
     <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="bg-white p-6 rounded-xl shadow"><h4 class="font-bold">Languages</h4><p>Python, Java, C++, R, SQL, HTML, CSS, JS</p></div>
-      <div class="bg-white p-6 rounded-xl shadow"><h4 class="font-bold">Web & API</h4><p>Django, REST, OAuth2, AJAX, Bootstrap</p></div>
-      <div class="bg-white p-6 rounded-xl shadow"><h4 class="font-bold">Cloud & DevOps</h4><p>AWS, Docker, Git, CI/CD, Kubernetes</p></div>
-      <div class="bg-white p-6 rounded-xl shadow"><h4 class="font-bold">Databases</h4><p>Oracle, MySQL, MongoDB, PostgreSQL</p></div>
-      <div class="bg-white p-6 rounded-xl shadow"><h4 class="font-bold">ML & Tools</h4><p>Pandas, NumPy, OpenCV, TensorFlow, Seurat (R)</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow"><h4 class="font-bold">Languages</h4><p>Python, Java, C++, R, SQL, HTML, CSS, JS</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow"><h4 class="font-bold">Web & API</h4><p>Django, REST, OAuth2, AJAX, Bootstrap</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow"><h4 class="font-bold">Cloud & DevOps</h4><p>AWS, Docker, Git, CI/CD, Kubernetes</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow"><h4 class="font-bold">Databases</h4><p>Oracle, MySQL, MongoDB, PostgreSQL</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow"><h4 class="font-bold">ML & Tools</h4><p>Pandas, NumPy, OpenCV, TensorFlow, Seurat (R)</p></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-4xl mx-auto py-16 px-6 text-center" data-aos="fade-up">
+  <section id="contact" class="py-16 px-6 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-    <p>Email: <a href="mailto:manoj.deo91@gmail.com" class="text-teal-600">manoj.deo91@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/manojdeo" class="text-teal-600">linkedin.com/in/manojdeo</a></p>
-    <p>GitHub: <a href="https://github.com/manoj-deo" class="text-teal-600">github.com/manoj-deo</a></p>
+    <p>Email: <a href="mailto:manoj.deo91@gmail.com" class="text-teal-400">manoj.deo91@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/manojdeo" class="text-teal-400">linkedin.com/in/manojdeo</a></p>
+    <p>GitHub: <a href="https://github.com/manoj-deo" class="text-teal-400">github.com/manoj-deo</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
+  <footer class="bg-gray-800 text-white py-6 text-center">
     <p>&copy; 2025 Manoj Deo | Built with Tailwind & ❤️</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json');
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 </body>
 </html>
+
 
